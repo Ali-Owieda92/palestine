@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #333;
+}
+.flag {
+    width: 500px;
+    height: 300px;
+    border: 1px solid black;
+    margin: 20px auto;
+    transform: translateY(50%);
+}
+.flag .black {
+    width: 100%;
+    height: calc(100% / 3);
+    background-color: black;
+}
+.flag .white {
+    width: 100%;
+    height: calc(100% / 3);
+    background-color: white;
+}
+.flag .white::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-style: solid;
+    border-width: 150px;
+    border-color: transparent transparent transparent red;
+}
+.flag .green {
+    width: 100%;
+    height: calc(100% / 3);
+    background-color: green;
+}
